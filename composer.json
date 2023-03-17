@@ -1,0 +1,13 @@
+{
+    "name": "kerunaru/malgranda",
+    "description": "A tiny old-school and opinionated PHP framework",
+    "require": {
+        "php": "^8.2",
+        "monolog/monolog": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  application:
+    image: local/malgranda:development
+    depends_on:
+      - database
+    working_dir: /var/www
+    ports:
+      - "8080:8080"
+    entrypoint: ["php", "-S", "0.0.0.0:8080", "-t", "public"]
+    volumes:
+      - ./:/var/www
+
+  database:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
+      POSTGRES_DB: test
+    ports:
+      - "5432:5432"
