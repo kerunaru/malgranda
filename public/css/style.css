@@ -1,5 +1,7 @@
 html {
 	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	background-color: #f2f2f2;
+	color: #222222;
 }
 
 h1, h2, h3 {
@@ -9,9 +11,33 @@ h1, h2, h3 {
 
 code {
 	font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-	color: white;
-	background: black;
-	padding: 3px;
-	border-radius: 3px;
+	color: #FFBF00;
+	background-color: #222222;
+	padding: 3px 6px;
+	border-radius: 2px;
 	font-size: small;
+}
+
+.content {
+	width: 65%;
+}
+
+.content-wide {
+	width: 90%;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color: #f2f2f2;
+		background-color: #222222;
+	}
+
+	code {
+		background-color: #FFBF00;
+		color: #222222;
+	}
 }
